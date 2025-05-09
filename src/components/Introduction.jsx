@@ -3,7 +3,7 @@ import Card from './Card'
 const Introduction = () => {
   return (
     <div className=' p-4'>
-        <h3 className='text-green-600 text-2xl m-2 text-center'>Yasmin provides Three learning paths</h3>
+        <h3 className='text-green-600 text-2xl font-bold m-2 text-center'>Yasmin provides Three learning paths</h3>
         <div className='flex flex-wrap justify-center gap-8'>
         <Card title={'1- Front End Development.'}
         description={'You will learn how to build well structred front end applications in industry standard , you will also learn the best tricks thats makes ur UI reach heighest levels of performance,animations and much more'}

@@ -1,16 +1,20 @@
 import { useState } from 'react'
-import Header from './components/header'
-import Introduction from './components/introduction.jsx'
-import Button from './components/button.jsx'
 import './App.css'
-
+import Home from './pages/Home.jsx'
+import Register from './pages/Register.jsx'
+import Login from './pages/Login.jsx'
+import { Routes,Route,Navigate} from 'react-router-dom'
 function App() {
 
   return (
-    <div className=' bg-slate-200 h-fit p-1 w-10/12 m-auto'>
-    <Header/>
-    <Introduction/>
-    <Button/>
+    <div className=' h-fit  w-10/12 m-auto overflow-hidden '>
+      <Routes>
+      <Route path="/" element={<Navigate to="/login" />} />
+      <Route path="/login" element={<Login />} />
+      <Route path="/register" element={<Register />} />
+      <Route path="/home" element={<Home />} />
+
+      </Routes>
     </div>
   )
 }
