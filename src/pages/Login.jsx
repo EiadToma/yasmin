@@ -24,7 +24,6 @@ const Register = () => {
     }
     else {
           showToastMessage('error')
-
     }
   }
 
