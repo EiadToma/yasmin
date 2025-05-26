@@ -6,7 +6,9 @@ import { Routes,Route,Navigate,useLocation } from 'react-router-dom'
 import Navbar from './components/Navbar.jsx'
 import UserDetails from './pages/UserDetails.jsx'
 import Dashboard from './pages/Dashboard.jsx'
-import ArticleSkeleton from './components/Loading.jsx'
+import ProductCard from './components/ProductCard.jsx'
+import Categories from './pages/Categories.jsx'
+import Products from './pages/Products.jsx'
 function App() {
   const location = useLocation();
   const hideNavbarOn = ["/login", "/register"];
@@ -21,7 +23,12 @@ function App() {
       <Route path="/register" element={<Register />} />
       <Route path="/home" element={<Home />} />
       <Route path="/dashboard" element={<Dashboard/>} />
+
       <Route path="/dashboard/:id" element={<UserDetails/>} />
+      <Route path="/categories" element={<Categories/>} />
+      <Route path="/categories/:category" element={<Products/>} />
+      <Route path="/categories/:category/:id" element={<ProductCard/>} />
+
       {/* <Route path="/test" element={<ArticleSkeleton/>} /> */}
 
 
